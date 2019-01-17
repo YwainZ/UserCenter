@@ -1,0 +1,55 @@
+.container {
+    width: 520px;
+    border-radius: 6px;
+    margin: 100px auto;
+    border: 1px solid #d1d5da;
+    padding-bottom: 36px;  
+}
+
+.wrap {
+    text-align: left;
+    border: 1px solid red;
+    padding: 48px 40px 36px;
+}
+
+.title {
+    color: #000;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.input {
+    width: 360px;
+    height: 36px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #5f6368;
+    font-weight: 500;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    ime-mode: active;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid #d1d5da;
+}
+
+.formItem {
+    padding: 20px 0;
+}
+
+.formItem div {
+    font-weight: 500;
+    color: #5f6368;
+}
+
+.operation {
+    color: #86869A;
+    text-decoration: underline;
+}
+
+.logo {
+    width: 84px;
+    height: 84px;
+}
+

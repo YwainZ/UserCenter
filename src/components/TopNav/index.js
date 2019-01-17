@@ -19,10 +19,9 @@ class TopNav extends React.Component {
     return (
       <div className={s.container}>
         <img src={nav} onClick={this.handleCilck} />
-        <p>用户中心</p>
-        <p>项目注册</p>
-        <p>获取密钥</p>
-        <p>设置全局密钥</p>
+        <a href="/">
+          <p>用户中心</p>
+        </a>
       </div>
     );
   }
