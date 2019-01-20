@@ -36,11 +36,15 @@ class Navigation extends React.Component {
             <p>项目注册</p>
           </Link>
           <Link to="/key">
-          <p>获取密钥</p>
+            <p>获取密钥</p>
           </Link>
-          <p>设置全局密钥</p>
+          <Link to="/setkey">
+            <p>设置全局密钥</p>
+          </Link>
           <p>用户统计</p>
-          <p>用户信息</p>
+          <Link to="/user">
+            <p>用户信息</p>
+          </Link>
           <p>日志</p>
         </div>
       </div>

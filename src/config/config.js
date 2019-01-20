@@ -1,5 +1,4 @@
 import 'whatwg-fetch';
-import queryString from 'query-string';
 
 const base_url = 'http://59.111.95.232:30002';
 const base_fetch = (api, method, data) => {
@@ -12,11 +11,14 @@ const base_fetch = (api, method, data) => {
         }
      }
     if (method === 'POST') {
-        options.body = JSON.stringify(data);{name: 'key'}
+        options.body = JSON.stringify(data);
     }
     if (method === 'GET' && data) {
-        api = api + queryString(data)
-        console.log('api', api)
+        let params = ''
+        for(const item in data) {
+            params += '&' + item + '=' + data[item]
+        }
+        api = api + '?' + params.slice(1, params.length)
     }
     const res = fetch(`${base_url}${api}`, options)
                 .then(res => res.json())
@@ -29,3 +31,5 @@ export const getAllProject = () => base_fetch('/facade/project/all', 'GET')
 export const registerPorject = (data) => base_fetch('/facade/project', 'POST', data)
 // 获取当前项目日志
 export const getLogs = (data) => base_fetch('/facade/log', 'GET', data)
+// 获取用户信息
+export const getUserInfo = (data) => base_fetch('/facade/user/project', 'GET', data)

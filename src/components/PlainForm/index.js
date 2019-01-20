@@ -1,6 +1,8 @@
 import React from 'react';
 import PropsType from "prop-types";
 import logo from '../../assets/logo.png';
+import logo_notext from '../../assets/logo_notext.png';
+import users from '../../assets/users.png';
 import s from './index.css';
 
 class PlainFrom extends React.Component {
@@ -8,6 +10,7 @@ class PlainFrom extends React.Component {
         formList: PropsType.array.isRequired,
         formName: PropsType.string.isRequired,
         handleConfirm: PropsType.func.isRequired, // todo: 表单校验部分
+        introduce: PropsType.string.isRequired, // 模块介绍
     }
 
     constructor(props) {
@@ -38,13 +41,14 @@ class PlainFrom extends React.Component {
     }
 
     render() {
-      const { formList, formName } = this.props;
+      const { formList, formName, introduce } = this.props;
       return (
         <div className={s.container}>
-      { /*<div className={s.title}>{ formName || '' }</div> */}
-            <div className={s.wrap}>
-              <img src={logo} alt="logo" className={s.logo}/>
-              <span className={s.title}>{ formName || '' }</span>
+          <div className={s.wrap}>
+              <div className={s.top}>
+                <img src={logo} alt="logo" className={s.logo}/>
+                <div className={s.title}>{ formName || '' }</div>
+              </div>
             { 
               formList && formList.map(formItem =>
               <div className={s.formItem}>
@@ -57,6 +61,10 @@ class PlainFrom extends React.Component {
               </div>)
             }
             <span className={s.operation} onClick={this.confirm}>确&nbsp;定</span>
+            </div>
+            <div className={s.right}>
+              <img className={s.rightImg}   src={users} />
+              <p>{ introduce }</p>
             </div>
         </div>
       )

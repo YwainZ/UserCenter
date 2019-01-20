@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../../components/Layout";
 import logo_notext from "../../assets/logo_notext.png";
-import users from "../../assets/users.png";
+import indexUsers from "../../assets/indexUsers.png";
 import { getAllProject } from '../../config/config.js';
 import s from "./index.css";
 
@@ -36,7 +36,7 @@ class Home extends React.Component {
         <Layout />
         <div className={s.search}>
           <img src={logo_notext} alt="logo" />
-          <img src={users} alt="user" />
+          <img src={indexUsers} alt="user" />
         </div>
         <div className={s.wrap}>
           <div className={s.wrapTitle}>UserCenter的应用项目</div>

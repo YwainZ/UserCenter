@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../../components/Layout';
 import PlainForm from '../../components/PlainForm';
-import { formList } from '../../config/constant';
+import { formList, keyIntro } from '../../config/constant';
 import s from './index.css';
 
 class Key extends React.Component {
@@ -13,6 +13,7 @@ class Key extends React.Component {
                 formName={'获取项目密钥'}
                 formList={formList}
                 handleConfirm={(data) => {this.getKey(data)}}
+                introduce={keyIntro}
               />
             </div>
         )
