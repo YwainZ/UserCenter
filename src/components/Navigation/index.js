@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import PropsType from "prop-types";
 import navLogo from "../../assets/navLogo.png";
 import s from "./index.css";
@@ -45,7 +45,9 @@ class Navigation extends React.Component {
           <Link to="/user">
             <p>用户信息</p>
           </Link>
-          <p>日志</p>
+          <Link to="/log">
+            <p>日志</p>
+          </Link>
         </div>
       </div>
     );

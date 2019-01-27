@@ -6,10 +6,11 @@ import {
   Redirect
 } from "react-router-dom";
 import Home from "./routes/Home";
-import Register from './routes/Register';
-import Key from './routes/Key';
-import SetKey from './routes/SetKey';
-import User from './routes/User';
+import Register from "./routes/Register";
+import Key from "./routes/Key";
+import SetKey from "./routes/SetKey";
+import User from "./routes/User";
+import Logs from "./routes/Logs";
 
 const IndexRouter = () => (
   <Router>
@@ -19,6 +20,7 @@ const IndexRouter = () => (
       <Route path="/key" component={Key} />
       <Route path="/setkey" component={SetKey} />
       <Route path="/user" component={User} />
+      <Route path="/log" component={Logs} />
     </Switch>
   </Router>
 );

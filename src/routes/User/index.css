@@ -1,64 +1,67 @@
-
 .wrap {
-    margin-top: 100px;
-    text-align: center;
+  margin-top: 100px;
+  text-align: center;
 }
 
 .wrap img {
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    border: 1px solid transparent;
-    margin-bottom: 20px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  margin-bottom: 20px;
 }
 
 .wrap input {
-    display: block;
-    margin: 0 auto;
-    width: 520px;
-    height: 48px;
-    border-style: unset;
-    border-radius: 8px;
-    border: 1px solid #d1d5da;
-    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .30), 0 1px 3px 1px rgba(60, 64, 67, .15);
-    color: #202124;
-    padding: 0 40px 0 72px;
-    font-size: 20px;
-    outline: none;
+  display: block;
+  margin: 0 auto;
+  width: 520px;
+  height: 48px;
+  border-style: unset;
+  border-radius: 8px;
+  border: 1px solid #d1d5da;
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3),
+    0 1px 3px 1px rgba(60, 64, 67, 0.15);
+  color: #202124;
+  padding: 0 40px 0 72px;
+  font-size: 20px;
+  outline: none;
 }
 
 .info {
-    width: 712px;
-    margin: 0 auto;
+  width: 712px;
+  margin: 0 auto;
 }
 
 .title {
-    margin-top: 100px;
-    text-align: center;
-    color: #fff;
-    font-weight: 500;
-    font-size: 20px;
-    background: rgba(83, 82, 113, 0.7);
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
-    display: flex;
-    justify-content: space-around;
+  margin-top: 100px;
+  text-align: center;
+  color: #fff;
+  font-weight: 500;
+  font-size: 20px;
+  background: rgba(83, 82, 113, 0.7);
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  display: flex;
+  justify-content: space-around;
 }
 
 .userInfo {
-    display: flex;
-    justify-content: space-around;
-    font-size: 20px;
-    color: #5f6368;
-    border-bottom: 1px solid #d1d5da;
+  display: flex;
+  justify-content: space-around;
+  font-size: 20px;
+  color: #5f6368;
+  border-bottom: 1px solid #d1d5da;
 }
 
-.userInfo p{
-    flex-basis: 120px;
+.userInfo p {
+  flex-basis: 120px;
 }
 
 .userInfo p:last-child {
-    flex-shrink: 2;
+  flex-shrink: 2;
 }
 
-
+.common {
+  font-size: 20px;
+  color: #5f6368;
+}
