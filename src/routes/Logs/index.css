@@ -1,17 +1,17 @@
 .tabs {
-  margin: 100px auto auto;
+  margin: auto auto;
   text-align: center;
   width: 800px;
-  border: 1px solid #d1d5da;
+  border-radius: 4px;
 }
 
 .title {
   font-size: 20px;
-  color: #5f6368;
+  font-weight: 500;
+  color: #000;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border-bottom: 1px solid #d1d5da;
 }
 
 .title div {
@@ -27,15 +27,29 @@
 }
 
 .content {
+  margin-top: 50px;
   min-height: 447px;
   font-size: 20px;
   color: #5f6368;
+  border: 1px solid #ededed;
+  border-radius: 6px;
+}
+
+.contentTitle {
+  background: rgba(83, 82, 113, 0.7);
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  color: #fff;
 }
 
 .content div {
   display: flex;
   justify-content: space-around;
-  border-bottom: 1px solid #d1d5da;
+  border-bottom: 1px solid #ededed;
+}
+
+.content div:not(:first-child):hover {
+  background: rgba(83, 82, 113, 0.1);
 }
 
 .content div:last-child {

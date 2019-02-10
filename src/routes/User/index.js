@@ -1,13 +1,18 @@
 import React from "react";
 import Layout from "../../components/Layout";
+import Confirm from "../../components/Confirm";
 import logo_notext from "../../assets/logo_notext.png";
 import { getUserInfo, getUserById } from "../../config/config";
 import s from "./index.css";
+
+const projectId = localStorage.getItem("projectId");
+const key = localStorage.getItem("key");
 class User extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      userInfo: []
+      userInfo: [],
+      msg: ""
     };
   }
 
@@ -17,9 +22,14 @@ class User extends React.Component {
 
   async handleGetUserInfo() {
     const userInfo = await getUserInfo();
+
     if (userInfo.success) {
       this.setState({
         userInfo: userInfo.data
+      });
+    } else {
+      this.setState({
+        msg: userInfo.msg
       });
     }
   }
@@ -40,9 +50,18 @@ class User extends React.Component {
   }
 
   render() {
-    const { userInfo } = this.state;
+    const { userInfo, msg } = this.state;
     return (
       <div className={s.container}>
+        {!projectId || !key ? (
+          <Confirm
+            title="提示"
+            tips={"请设置全局密钥后查看"}
+            confirmText="马上设置"
+          />
+        ) : msg ? (
+          <Confirm title="提示" tips={msg} confirmText="重新设置" />
+        ) : null}
         <Layout />
         <div className={s.wrap}>
           <img src={logo_notext} alt="logo" />

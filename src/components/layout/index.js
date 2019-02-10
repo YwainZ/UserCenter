@@ -1,6 +1,7 @@
 import React from "react";
 import Navigation from "../Navigation";
 import TopNav from "../TopNav";
+import s from "./index.css";
 
 class Layout extends React.Component {
   constructor(props) {
@@ -24,6 +25,9 @@ class Layout extends React.Component {
       <div>
         <TopNav showNav={() => this.toggleNavShow(true)} />
         {isNavShow && <Navigation hideNav={() => this.toggleNavHide(false)} />}
+        {
+          //<div className={s.footer}>Made & Design By Claire😊</div>
+        }
       </div>
     );
   }

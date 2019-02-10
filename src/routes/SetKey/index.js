@@ -12,7 +12,9 @@ class SetKey extends React.Component {
     } else {
       localStorage.setItem("projectId", projectId);
       localStorage.setItem("key", key);
-      window.confirm("设置成功");
+      if (window.confirm("设置成功")) {
+        window.location = "/";
+      }
     }
   }
 

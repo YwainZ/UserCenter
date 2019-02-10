@@ -1,5 +1,4 @@
 .wrap {
-  margin-top: 100px;
   text-align: center;
 }
 
@@ -8,21 +7,17 @@
   height: 56px;
   border-radius: 50%;
   border: 1px solid transparent;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .wrap input {
   display: block;
   margin: 0 auto;
-  width: 520px;
+  width: 600px;
   height: 48px;
-  border-style: unset;
-  border-radius: 8px;
-  border: 1px solid #d1d5da;
-  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3),
-    0 1px 3px 1px rgba(60, 64, 67, 0.15);
+  border-style: none;
+  border-bottom: 1px solid #d1d5da;
   color: #202124;
-  padding: 0 40px 0 72px;
   font-size: 20px;
   outline: none;
 }
@@ -30,10 +25,12 @@
 .info {
   width: 712px;
   margin: 0 auto;
+  margin-top: 50px;
+  border: 1px solid #ededed;
+  border-radius: 8px;
 }
 
 .title {
-  margin-top: 100px;
   text-align: center;
   color: #fff;
   font-weight: 500;
@@ -48,9 +45,14 @@
 .userInfo {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   font-size: 20px;
   color: #5f6368;
-  border-bottom: 1px solid #d1d5da;
+  border-bottom: 1px solid #ededed;
+}
+
+.userInfo:not(:first-child):hover {
+  background: rgba(83, 82, 113, 0.1);
 }
 
 .userInfo p {

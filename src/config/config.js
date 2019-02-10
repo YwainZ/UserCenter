@@ -1,6 +1,6 @@
 import "whatwg-fetch";
 
-const base_url = "http://59.111.95.232:30002";
+const base_url = "http://usercenter.stalary.com";
 const projectId = localStorage.getItem("projectId");
 const key = localStorage.getItem("key");
 const base_fetch = (api, method, data, isForm) => {

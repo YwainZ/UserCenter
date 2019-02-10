@@ -12,7 +12,8 @@ module.exports = {
     historyApiFallback: true,
     contentBase: "./public",
     hot: true,
-    port: 7300
+    port: 7300,
+    host: "0.0.0.0"
   }, // 热更新
   module: {
     rules: [
