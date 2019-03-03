@@ -58,3 +58,5 @@ export const getUserById = userId => base_fetch("/facade/user", "GET", userId);
 // 获取项目密钥
 export const getProjectKey = data =>
   base_fetch("/facade/project", "GET", data, true);
+// 获取项目统计信息
+export const getMap = () => base_fetch('/facade/statistics', "GET");

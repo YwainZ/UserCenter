@@ -13,7 +13,8 @@ module.exports = {
     contentBase: "./public",
     hot: true,
     port: 7300,
-    host: "0.0.0.0"
+    host: "0.0.0.0",
+    disableHostCheck: true
   }, // 热更新
   module: {
     rules: [

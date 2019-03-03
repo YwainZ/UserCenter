@@ -41,7 +41,9 @@ class Navigation extends React.Component {
           <Link to="/setkey">
             <p>设置全局密钥</p>
           </Link>
-          <p style={{ color: "#e6e6e6" }}>用户统计</p>
+          <Link to="/statistic">
+            <p>用户统计</p>
+          </Link>
           <Link to="/user">
             <p>用户信息</p>
           </Link>

@@ -4,7 +4,7 @@ import Confirm from "../../components/Confirm";
 import { getLogs } from "../../config/config";
 import s from "./index.css";
 
-const infos = ["日志信息", "错误信息", "警告信息"];
+const infos = ["普通信息", "警告信息", "错误信息"];
 const projectId = localStorage.getItem("projectId");
 const key = localStorage.getItem("key");
 
@@ -49,9 +49,9 @@ class Log extends React.Component {
       case 0:
         return infoList;
       case 1:
-        return errorList;
-      case 2:
         return warnList;
+      case 2:
+        return errorList;
       default:
         return infoList;
     }
